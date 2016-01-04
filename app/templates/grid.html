@@ -1,0 +1,10 @@
+
+{{config.size}}
+
+<table>
+	<tr *ngFor="#rowIndex of [0] | range:config.size" [class.border-top]="rowIndex % config.square == 0">
+		<td *ngFor="#columnIndex of [0] | range:config.size" [class.border-left]="columnIndex % config.square == 0" class="cell">
+			<cell-char [rowIndex]="rowIndex" [columnIndex]="columnIndex"></cell-char>
+		</td>
+	</tr>
+</table>
